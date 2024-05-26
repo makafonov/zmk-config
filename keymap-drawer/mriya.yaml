@@ -37,7 +37,7 @@ layers:
   - /
   - {t: '-', h: RALT}
   - ''
-  - {t: TAB, h: LGUI}
+  - LEFT GUI
   - {t: SPACE, h: LSHFT}
   - {t: RET, h: raise}
   - {t: ESC, h: lower}
@@ -81,21 +81,21 @@ layers:
   - '3'
   - ''
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: DEL, h: adjust}
-  - {t: ▽, type: trans}
+  - {t: adjust, h: toggle}
+  - ''
   raise:
   - {t: ▽, type: trans}
-  - KP SLASH
-  - KP 7
-  - KP 8
-  - KP 9
-  - KP MINUS
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - HOME
   - PAGE DOWN
   - PG UP
@@ -103,11 +103,11 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - KP MULTIPLY
-  - KP 4
-  - KP 5
-  - KP 6
-  - KP PLUS
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - LEFT
   - DOWN ARROW
   - UP
@@ -115,25 +115,25 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - KP 0
-  - KP 1
-  - KP 2
-  - KP 3
-  - KP DOT
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - Hyper+ 1
   - Hyper+ 2
   - Hyper+ 3
   - Hyper+ 4
   - ''
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - {t: adjust, h: toggle}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
   adjust:
   - '&bootloader'
   - ''
@@ -175,18 +175,26 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - ''
-  - {type: held}
+  - {t: ▽, type: trans}
   - ''
 combos:
 - p: [15, 16]
   k: (
+  l: [default]
 - p: [14, 15]
   k: '['
+  l: [default]
 - p: [19, 20]
   k: )
+  l: [default]
 - p: [20, 21]
   k: ']'
+  l: [default]
 - p: [16, 19]
   k: '&caps_word'
+  l: [default]
+- p: [33, 34]
+  k: \
+  l: [default]
