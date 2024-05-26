@@ -1,0 +1,192 @@
+layers:
+  default:
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - {t: '`', h: LCTRL}
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - {t: '''', h: RCTRL}
+  - {t: '=', h: LALT}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: '-', h: RALT}
+  - ''
+  - {t: TAB, h: LGUI}
+  - {t: SPACE, h: LSHFT}
+  - {t: RET, h: raise}
+  - {t: ESC, h: lower}
+  - {t: BSPC, h: RSHFT}
+  - RGUI
+  - ''
+  lower:
+  - {t: ▽, type: trans}
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ''
+  - '7'
+  - '8'
+  - F9
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - ^
+  - '&'
+  - '*'
+  - ''
+  - ''
+  - ''
+  - '4'
+  - '5'
+  - '6'
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: DEL, h: adjust}
+  - {t: ▽, type: trans}
+  raise:
+  - {t: ▽, type: trans}
+  - KP SLASH
+  - KP 7
+  - KP 8
+  - KP 9
+  - KP MINUS
+  - HOME
+  - PAGE DOWN
+  - PG UP
+  - END
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - KP MULTIPLY
+  - KP 4
+  - KP 5
+  - KP 6
+  - KP PLUS
+  - LEFT
+  - DOWN ARROW
+  - UP
+  - RIGHT
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - KP 0
+  - KP 1
+  - KP 2
+  - KP 3
+  - KP DOT
+  - Hyper+ 1
+  - Hyper+ 2
+  - Hyper+ 3
+  - Hyper+ 4
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  adjust:
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&bootloader'
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT CLR
+  - '&sys_reset'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&sys_reset'
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ''
+  - {type: held}
+  - ''
+combos:
+- p: [15, 16]
+  k: (
+- p: [14, 15]
+  k: '['
+- p: [19, 20]
+  k: )
+- p: [20, 21]
+  k: ']'
+- p: [16, 19]
+  k: '&caps_word'
