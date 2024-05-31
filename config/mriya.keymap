@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include "keypos_def/keypos_44keys.h"
 
 #define DEF 0
 #define LWR 1
@@ -19,13 +20,26 @@
 
 / {
     behaviors {
-        bhm: balanced_homerow_mods {
+        lh_pht: left_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        rh_pht: right_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
         };
     };
 
@@ -74,10 +88,10 @@
 
         default_layer {
             bindings = <
-  &kp GRAVE  &kp Q         &kp W        &kp E        &kp R          &kp T        &kp Y      &kp U          &kp I        &kp O        &kp P            &kp LBKT
-  &kp TAB    &bhm LCTRL A  &bhm LALT S  &bhm LGUI D  &bhm LSHIFT F  &kp G        &kp H      &bhm RSHIFT J  &bhm RGUI K  &bhm RALT L  &bhm RCTRL SEMI  &kp SQT
-  &kp EQUAL  &kp Z         &kp X        &kp C        &kp V          &kp B        &kp N      &kp M          &kp COMMA    &kp DOT      &kp FSLH         &kp MINUS
-                           &none        &mo 1        &kp SPACE      &lt 2 RET    &lt 2 ESC  &kp BACKSPACE  &mo 1        &none
+  &kp GRAVE  &kp Q            &kp W           &kp E           &kp R             &kp T        &kp Y      &kp U             &kp I           &kp O           &kp P               &kp LBKT
+  &kp TAB    &lh_pht LCTRL A  &lh_pht LALT S  &lh_pht LGUI D  &lh_pht LSHIFT F  &kp G        &kp H      &rh_pht RSHIFT J  &rh_pht RGUI K  &rh_pht RALT L  &rh_pht RCTRL SEMI  &kp SQT
+  &kp EQUAL  &kp Z            &kp X           &kp C           &kp V             &kp B        &kp N      &kp M             &kp COMMA       &kp DOT         &kp FSLH            &kp MINUS
+                              &none           &mo 1           &kp SPACE         &lt 2 RET    &lt 2 ESC  &kp BACKSPACE     &mo 1           &none
             >;
         };
 
@@ -92,10 +106,10 @@
 
         raise_layer {
             bindings = <
-  &none   &none      &none     &none     &none       &kp C_VOL_UP        &kp HOME                      &kp PAGE_DOWN                 &kp PG_UP                     &kp END                       &none  &none
-  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHIFT  &kp C_VOL_DN        &kp LEFT                      &kp DOWN_ARROW                &kp UP                        &kp RIGHT                     &none  &none
-  &none   &none      &none     &none     &none       &kp K_PLAY_PAUSE    &kp LS(LA(LC(LG(NUMBER_1))))  &kp LS(LA(LC(LG(NUMBER_2))))  &kp LS(LA(LC(LG(NUMBER_3))))  &kp LS(LA(LC(LG(NUMBER_4))))  &none  &none
-                     &none     &none     &none       &none               &none                         &none                         &none                         &none
+  &none   &none      &none     &none     &none       &kp C_VOL_UP        &kp HOME     &kp PAGE_DOWN                 &kp PG_UP                     &kp END                       &none                           &none
+  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHIFT  &kp C_VOL_DN        &kp LEFT     &kp DOWN_ARROW                &kp UP                        &kp RIGHT                     &none                           &none
+  &none   &none      &none     &none     &none       &kp K_PLAY_PAUSE    &none        &kp LS(LA(LC(LG(NUMBER_1))))  &kp LS(LA(LC(LG(NUMBER_2))))  &kp LS(LA(LC(LG(NUMBER_3))))  &kp LS(LA(LC(LG(NUMBER_4))))    &none
+                     &none     &none     &none       &none               &none        &none                         &none                         &none
             >;
         };
 
